@@ -2,6 +2,11 @@
 
 Share instructions with everyone using beautiful markdown documents.
 
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)](https://supabase.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+
 ## Features
 
 - Rich text editor with markdown support
@@ -12,52 +17,16 @@ Share instructions with everyone using beautiful markdown documents.
 - Share documents with unique URLs
 - Copy to clipboard functionality
 
-## Getting Started
+## Deployment
 
-1. Clone the repository
-2. Install dependencies:
 
-   ```bash
-   npm install
-   ```
+## Contributing
 
-3. Create a Supabase project at [https://supabase.com](https://supabase.com)
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-4. Copy the `.env.example` file to `.env.local` and fill in your Supabase credentials:
+## License
 
-   ```bash
-   cp .env.example .env.local
-   ```
-
-5. Run the development server:
-
-   ```bash
-   npm run dev
-   ```
-
-6. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-## Database Schema
-
-The application uses two main tables in Supabase:
-
-### Documents
-
-- id: uuid (primary key)
-- created_at: timestamp
-- updated_at: timestamp
-- title: text
-- content: text
-- user_id: uuid (foreign key to auth.users)
-- slug: text (unique)
-
-### Profiles
-
-- id: uuid (primary key, references auth.users)
-- created_at: timestamp
-- username: text (unique)
-- full_name: text
-- avatar_url: text
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Technologies Used
 
