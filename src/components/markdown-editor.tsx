@@ -2,7 +2,6 @@
 
 import React, { useState } from "react";
 import dynamic from "next/dynamic";
-import { type MDEditorProps } from "@uiw/react-md-editor";
 
 const MDEditor = dynamic(
   () => import("@uiw/react-md-editor").then((mod) => mod.default),
@@ -10,7 +9,11 @@ const MDEditor = dynamic(
 );
 
 const MDPreview = dynamic(
-  () => import("@uiw/react-md-editor").then((mod) => mod.Preview),
+  () =>
+    import("@uiw/react-md-editor").then((mod) => {
+      const { default: MDEditor } = mod;
+      return MDEditor.Markdown;
+    }),
   { ssr: false }
 );
 
